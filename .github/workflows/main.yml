@@ -1,0 +1,28 @@
+name: Caller
+
+on:
+  push:
+    branches:
+      - 'main'
+  workflow_run:
+    workflows: ["CI"]
+    types:
+      - completed
+jobs:
+
+  master:
+    uses: https://github.com/aneeshchackov/.github/workflows/master.yml@main
+
+  build:
+    name: Validation_Build
+    runs-on: self-hosted
+    steps:
+
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Download Source Artifact
+        uses: actions/download-artifact@v2
+        with:
+          name: artifact
+          path: artifact
