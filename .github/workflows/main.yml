@@ -15,7 +15,7 @@ jobs:
 
   build:
     name: Validation_Build
-    runs-on: widows-latest
+    runs-on: windows-latest
     steps:
 
       - name: Checkout repository
