@@ -11,7 +11,7 @@ on:
 jobs:
 
   master:
-    uses: https://github.com/aneeshchackov/.github/workflows/master.yml@main
+    uses: aneeshchackov/master/.github/workflows/master.yml@main
 
   build:
     name: Validation_Build
