@@ -16,7 +16,7 @@ jobs:
   build:
     name: Caller
     runs-on: windows-latest   
-    if: ${{ github.event.workflow_run.conclusion == 'success' }}
+    # if: ${{ github.event.workflow_run.conclusion == 'success' }}
     env:
       ACTIONS_RUNNER_DEBUG: true # Enable debug logging
       ACTIONS_STEP_DEBUG: true # Enable debug logging
