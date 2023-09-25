@@ -16,11 +16,13 @@ jobs:
   build:
     # name: Validation_Build
     runs-on: windows-latest
-    if: ${{ github.event.workflow_run.conclusion == 'success' }}
+    # if: ${{ github.event.workflow_run.conclusion == 'success' }}
     steps:
       - name: Run After Successful Workflow
         # if: ${{ github.event.workflow_run.conclusion == 'success' }}
-        run: echo "This job runs after the previous workflow succeeded"
+        run: |
+          echo "This job runs after the previous workflow succeeded"
+          ${{github.event.workflow_run.conclusion}}
       - name: Checkout repository
         uses: actions/checkout@v4
         # with:
