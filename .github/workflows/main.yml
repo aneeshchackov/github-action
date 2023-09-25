@@ -20,10 +20,10 @@ jobs:
       - name: Run After Successful Workflow
         if: ${{ github.event.workflow_run.conclusion == 'success' }}
         run: echo "This job runs after the previous workflow succeeded"
-      - name: Checkout repository
-        uses: actions/checkout@v4
-        with:
-          repository: aneeshchackov/master
+      # - name: Checkout repository
+        # uses: actions/checkout@v4
+        # with:
+          # repository: aneeshchackov/master
       - name: Download Source Artifact
         uses: actions/download-artifact@v2
         with:
