@@ -10,8 +10,8 @@ on:
 
 jobs:
 
-  # master:
-    # uses: aneeshchackov/master/.github/workflows/master.yml@main
+  master:
+    uses: aneeshchackov/master/.github/workflows/master.yml@main
 
   build:
     # name: Validation_Build
